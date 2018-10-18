@@ -18,13 +18,14 @@
 #server.name: "your-hostname"
 
 # The URL of the Elasticsearch instance to use for all your queries.
-#elasticsearch.url: "http://localhost:9200"
+#elasticsearch.url: "http://vpc-gf-f8-bigdata-dev-es01-fz577nc6ku3cotbucwifc3az3i.us-east-1.es.amazonaws.com:80"
+#elasticsearch.url: "http://vpc-gf-f8-bigdata-dev-metrics-2ilko6ntxbmhxhreiqwjjevbia.us-east-1.es.amazonaws.com:80"
 
 # When this setting's value is true Kibana uses the hostname specified in the server.host
 # setting. When the value of this setting is false, Kibana uses the hostname of the host
 # that connects to this Kibana instance.
 #elasticsearch.preserveHost: true
-
+timelion.enabled: true
 # Kibana uses an index in Elasticsearch to store saved searches, visualizations and
 # dashboards. Kibana creates a new index if the index doesn't already exist.
 #kibana.index: ".kibana"
@@ -67,7 +68,7 @@
 
 # List of Kibana client-side headers to send to Elasticsearch. To send *no* client-side
 # headers, set this value to [] (an empty list).
-#elasticsearch.requestHeadersWhitelist: [ authorization ]
+elasticsearch.requestHeadersWhitelist: []
 
 # Header names and values that are sent to Elasticsearch. Any custom headers cannot be overwritten
 # by client-side headers, regardless of the elasticsearch.requestHeadersWhitelist configuration.

@@ -37,25 +37,6 @@ export class PanelOptionsMenu extends React.Component {
     const { isExpanded } = this.props;
     const mainPanelMenuItems = [
       {
-        name: 'Edit visualization',
-        'data-test-subj': 'dashboardPanelEditLink',
-        icon: <span
-          aria-hidden="true"
-          className="kuiButton__icon kuiIcon fa-edit"
-        />,
-        onClick: this.onEditPanel,
-        disabled: !this.props.editUrl,
-      },
-      {
-        name: 'Customize panel',
-        'data-test-subj': 'dashboardPanelOptionsSubMenuLink',
-        icon: <span
-          aria-hidden="true"
-          className="kuiButton__icon kuiIcon fa-edit"
-        />,
-        panel: 'panelSubOptionsMenu',
-      },
-      {
         name: isExpanded ? 'Minimize' : 'Full screen',
         'data-test-subj': 'dashboardPanelExpandIcon',
         icon: <span
@@ -65,17 +46,6 @@ export class PanelOptionsMenu extends React.Component {
         onClick: this.onToggleExpandPanel,
       }
     ];
-    if (!this.props.isExpanded) {
-      mainPanelMenuItems.push({
-        name: 'Delete from dashboard',
-        'data-test-subj': 'dashboardPanelRemoveIcon',
-        icon: <span
-          aria-hidden="true"
-          className="kuiButton__icon kuiIcon fa-trash"
-        />,
-        onClick: this.onDeletePanel,
-      });
-    }
 
     return {
       title: 'Options',

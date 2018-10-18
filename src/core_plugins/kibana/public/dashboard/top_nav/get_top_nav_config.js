@@ -53,6 +53,9 @@ function getEditConfig(action) {
     key: 'edit',
     description: 'Switch to edit mode',
     testId: 'dashboardEditMode',
+    disableButton: function () {
+      return true;
+    },
     run: action
   };
 }
@@ -89,6 +92,9 @@ function getCloneConfig(action) {
     key: 'clone',
     description: 'Create a copy of your dashboard',
     testId: 'dashboardClone',
+    disableButton: function () {
+      return true;
+    },
     run: action
   };
 }
